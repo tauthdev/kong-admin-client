@@ -281,7 +281,9 @@ public interface PluginApi {
 	 * @param route    The unique identifier or the name of the Route to retrieve.
 	 * @param pluginId The unique identifier of the Plugin to retrieve.
 	 */
-	@RequestLine("DELETE /routes/{route}/{plugin_id}")
+	// @RequestLine("DELETE /routes/{route}/{plugin_id}")
+	// void deleteByRoute(@Param("route") String route, @Param("plugin_id") String pluginId);
+	@RequestLine("DELETE /routes/{route}/plugins/{plugin_id}")
 	void deleteByRoute(@Param("route") String route, @Param("plugin_id") String pluginId);
 
 	/**
